@@ -27,9 +27,34 @@ public class massaCorporal {
 		 * Cálculo do IMC e exibição na tela
 		 */
 		imc = Math.round(peso/(altura*altura));
-		System.out.println("");
-		System.out.println("O IMC do indivíduo é: "+imc);
-
+		
+		System.out.println("\rO IMC do indivíduo é: "+imc);
+		
+		/**
+		 * Verificação do IMC de acordo com os parâmetros para adultos, com idade entre 20 e 65 anos
+		 */
+		if(imc <= 10) {
+			System.out.println("O resultado indica possível Desnutrição Grau V.");
+		} else if(imc < 13 & imc >= 10) {
+			System.out.println("O resultado indica possível Desnutrição Grau IV.");
+		} else if(imc < 16 & imc >= 13) {
+			System.out.println("O resultado indica possível Desnutrição Grau III.");
+		} else if(imc < 17 & imc >= 16) {
+			System.out.println("O resultado indica possível Desnutrição Grau II.");
+		} else if(imc < 18.5 & imc >= 17) {
+			System.out.println("O resultado indica possível Desnutrição Grau I.");
+		} else if(imc < 25 & imc >= 18.5) {
+			System.out.println("O resultado apresenta o IMC considerado normal.");
+		} else if(imc < 30 & imc >=25) {
+			System.out.println("O resultado indica possível Pré-obesidade.");
+		} else if(imc < 34.6 & imc >=30) {
+			System.out.println("O resultado indica possível Obesidade Grau I.");
+		} else if(imc < 40 & imc >=34.6) {
+			System.out.println("O resultado indica possível Obesidade Grau II.");			
+		} else {
+			System.out.println("O resultado indica possível Obesidade Grau III.");	
+		}
+		
 	}
 
 }
