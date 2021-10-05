@@ -11,17 +11,16 @@ public class numerosPrimos {
 		numero = Integer.parseInt(scan.nextLine());
 		scan.close();
 
-		/*
-		Bloco utilizado originalmente na aula
-			
-		for(int i=1 ; i<=numero ; i++) {
-			if(numero % i == 0) {
-				System.out.print(numero/i+" ");
-				contador++;
-			}
-		}
-		
-		*/
+
+//		Bloco utilizado originalmente na aula
+//			
+//		for(int i=1 ; i<=numero ; i++) {
+//			if(numero % i == 0) {
+//				System.out.print(numero/i+" ");
+//				contador++;
+//			}
+//		}
+
 		
 		/**
 		 * Bloco ajustado para exibir os divisíveis localizados
