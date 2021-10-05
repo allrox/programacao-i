@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Carro {
 
 	String fabricante, modelo, cor, placa;
@@ -117,6 +119,10 @@ public class Carro {
 		}
 	}
 	
+	/**
+	 * Método para imprimir os dados recebidos
+	 */
+	
 	public void imprimir() {
 		System.out.println("\n\nExibindo informações coletadas:");
 		System.out.println("-------------------------------");
@@ -132,5 +138,38 @@ public class Carro {
 		System.out.println("Ano do Modelo: " + getAnoModelo());
 	}
 	
+	public void entradaDados() {
+		
+		Scanner entrada = new Scanner(System.in);
 
+		/**
+		 * Entrada dos dados utilizando Setters
+		 */
+		System.out.print("Informe o fabricante do automóvel: ");
+		setFabricante(entrada.nextLine());
+		
+		System.out.print("Informe o modelo: ");
+		setModelo(entrada.nextLine());
+		
+		System.out.print("Informe a Cor: ");
+		setCor(entrada.nextLine());
+		
+		System.out.print("Informe a placa: ");
+		setPlaca(entrada.nextLine());
+		
+		System.out.print("Informe o valor: ");
+		setValor(Double.parseDouble(entrada.nextLine()));
+		
+		System.out.print("Informe o número de portas: ");
+		setNumPortas(Integer.parseInt(entrada.nextLine()));
+		
+		System.out.print("Informe o ano de fabricação: ");
+		setAnoFabricacao(Integer.parseInt(entrada.next()));
+		
+		System.out.print("Informe o ano do modelo: ");
+		setAnoModelo(Integer.parseInt(entrada.next()));
+		
+		entrada.close();
+	}
+	
 }
