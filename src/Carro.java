@@ -6,11 +6,38 @@ public class Carro {
 	double valor;
 	int numPortas, anoFabricacao, anoModelo;
 	
+//	Este construtor vazio permite a construção do objeto
+//	através dos setters diretamente na aplicação (main)
+	
+	public Carro() {}
 	
 	/**
-	 * Métodos de atribuição e recuperação
-	 * Getter e Setter do Fabricante
+	 * Este construtor define a estrutura de parâmetros para construção do objeto.
+	 * @param fabricante
+	 * @param modelo
+	 * @param cor
+	 * @param placa
+	 * @param numPortas
+	 * @param valor
+	 * @param anoFabricacao
+	 * @param anoModelo
 	 */
+	
+	public Carro(String fabricante, String modelo, String cor, String placa, 
+			int numPortas, int valor, int anoFabricacao, int anoModelo) {
+			this.setFabricante(fabricante);
+			this.setModelo(modelo);
+			this.setCor(cor);
+			this.setPlaca(placa);
+			this.setNumPortas(numPortas);
+			this.setValor(valor);
+			this.setAnoFabricacao(anoFabricacao);
+			this.setAnoModelo(anoModelo);
+	}
+	
+	
+//	Métodos de atribuição e recuperação Getters e Setters
+	 
 	public String getFabricante() {
 		return fabricante;
 	}
@@ -21,10 +48,6 @@ public class Carro {
 		}
 	}
 	
-	/**
-	 * Métodos de atribuição e recuperação
-	 * Getter e Setter do Modelo
-	 */
 	public String getModelo() {
 		return modelo;
 	}
@@ -35,10 +58,6 @@ public class Carro {
 		}
 	}
 	
-	/**
-	 * Métodos de atribuição e recuperação
-	 * Getter e Setter da Cor
-	 */
 	public String getCor() {
 		return cor;
 	}
@@ -49,10 +68,6 @@ public class Carro {
 		}
 	}
 	
-	/**
-	 * Métodos de atribuição e recuperação
-	 * Getter e Setter da Placa
-	 */
 	public String getPlaca() {
 		return placa;
 	}
@@ -63,10 +78,6 @@ public class Carro {
 		}
 	}
 	
-	/**
-	 * Métodos de atribuição e recuperação
-	 * Getter e Setter do Valor
-	 */
 	public double getValor() {
 		return valor;
 	}
@@ -77,10 +88,6 @@ public class Carro {
 		}
 	}
 	
-	/**
-	 * Métodos de atribuição e recuperação
-	 * Getter e Setter do Número de Portas
-	 */
 	public int getNumPortas() {
 		return numPortas;
 	}
@@ -91,10 +98,6 @@ public class Carro {
 		}
 	}
 	
-	/**
-	 * Métodos de atribuição e recuperação
-	 * Getter e Setter do Ano de Fabricação
-	 */
 	public int getAnoFabricacao() {
 		return anoFabricacao;
 	}
@@ -105,10 +108,6 @@ public class Carro {
 		}
 	}
 	
-	/**
-	 * Métodos de atribuição e recuperação
-	 * Getter e Setter do Ano do Modelo
-	 */
 	public int getAnoModelo() {
 		return anoModelo;
 	}
@@ -119,32 +118,36 @@ public class Carro {
 		}
 	}
 	
-	/**
-	 * Método para imprimir os dados recebidos
-	 */
 	
+//	Método para impressão dos dados recebidos na aplicação (main)
+	 
 	public void imprimir() {
-		System.out.println("\n\nExibindo informações coletadas:");
-		System.out.println("-------------------------------");
-		System.out.println("Fabricante: " + getFabricante());
-		System.out.println("Modelo: " + getModelo());
-		System.out.println("-------------------------------");
-		System.out.println("Cor: " + getCor());
-		System.out.println("Placa: " + getPlaca());
-		System.out.println("Valor: R$ " + getValor());
-		System.out.println("Portas: " + getNumPortas());
-		System.out.println("-------------------------------");
-		System.out.println("Ano de Fabricação: " + getAnoFabricacao());
-		System.out.println("Ano do Modelo: " + getAnoModelo());
+		System.out.println("Informações do automóvel:");
+		System.out.println("-----------------------------------");
+		System.out.println("Fabricante:\t\t" + getFabricante());
+		System.out.println("Modelo:\t\t\t" + getModelo());
+		System.out.println("-----------------------------------");
+		System.out.println("Cor:\t\t\t" + getCor());
+		System.out.println("Placa:\t\t\t" + getPlaca());
+		System.out.println("Portas:\t\t\t" + getNumPortas());
+		System.out.println("Valor:\t\t\tR$ " + getValor());
+		System.out.println("-----------------------------------");
+		System.out.println("Ano de Fabricação:\t" + getAnoFabricacao());
+		System.out.println("Ano do Modelo:\t\t" + getAnoModelo());
+		System.out.println("\n");
 	}
+	
+	
+//	Método para realizar entrada de dados na aplicação (main)
 	
 	public void entradaDados() {
 		
+		
+//		Definindo a para entrada de dados com a classe Scanner
+		 
 		Scanner entrada = new Scanner(System.in);
 
-		/**
-		 * Entrada dos dados utilizando Setters
-		 */
+		/* Entrada dos dados utilizando Setters */
 		System.out.print("Informe o fabricante do automóvel: ");
 		setFabricante(entrada.nextLine());
 		
